@@ -1,0 +1,35 @@
+[ignore]
+.*/node_modules/fbjs/.*
+.*/node_modules/config-chain/test/broken.json
+.*/node_modules/npmconf/test/.*
+.*/node_modules/babel.*
+.*/node_modules/eslint-plugin.*
+.*/node_modules/mitt.*
+.*/.next.*
+.*/node_modules/styled-components/src.*
+.*/node_modules/polished/lib/color.*
+.*/node_modules/polished/lib/internal.*
+.*/node_modules/polished/lib/index.js.flow
+.*/node_modules/polished/lib/helpers.*
+.*/node_modules/polished/lib/short.*
+
+[include]
+
+[libs]
+flow-typed
+
+[options]
+module.name_mapper='^apps\(\/?.*\)$' -> '<PROJECT_ROOT>/apps/\1'
+module.name_mapper='^types\(\/?.*\)$' -> '<PROJECT_ROOT>/types/\1'
+module.name_mapper='^components\(\/?.*\)$' -> '<PROJECT_ROOT>/components/\1'
+module.name_mapper='^lib\(\/?.*\)$' -> '<PROJECT_ROOT>/lib/\1'
+module.name_mapper='^flags$' -> '<PROJECT_ROOT>/flags'
+module.name_mapper='^routes$' -> '<PROJECT_ROOT>/routes'
+module.name_mapper='^stub\(\/?.*\)$' -> '<PROJECT_ROOT>/stub/\1'
+
+suppress_comment= \\(.\\|\n\\)*\\$FlowBug
+
+[lints]
+
+[version]
+0.59.0

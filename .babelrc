@@ -1,0 +1,25 @@
+{
+  "presets": ["react", "flow", "env", "stage-0", "next/babel"],
+  "plugins": [
+    [
+      "module-resolver",
+      {
+        "root": ["./"]
+      }
+    ]
+  ],
+  "env": {
+    "production": {
+      "plugins": [
+        [
+          "styled-components",
+          {
+            "ssr": true,
+            "displayName": false,
+            "minify": true
+          }
+        ]
+      ]
+    }
+  }
+}
